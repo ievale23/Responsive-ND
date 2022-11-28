@@ -1,0 +1,202 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/* 
+  ========
+  GENERAL
+  ========
+  */
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --width-main: 75%;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+p {
+  font-size: 1.5em;
+}
+
+/* 
+  ========
+  Header
+  ========
+  */
+
+header {
+  height: 100px;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  color: beige;
+  padding: 0 5%;
+}
+
+header img {
+  max-height: 100%;
+}
+
+#menu-links {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+  color: beige;
+  font-size: 20px;
+}
+
+#menu-links a {
+  text-decoration: none;
+  color: beige;
+}
+
+/* 
+  ========
+  About
+  ========
+  */
+
+#section-about {
+  height: 600px;
+  background-color: grey;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: black;
+  row-gap: 10%;
+}
+
+#section-about p,
+#section-about h1 {
+  width: 80%;
+}
+
+/* 
+  ========
+  Gallery
+  ========
+  */
+
+#section-gallery {
+  /* height: 1000px; */
+  background-color: rgb(150, 149, 149);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0;
+  row-gap: 40px;
+}
+
+.gallery-card {
+  /* border: black 2px solid; */
+  width: var(--width-main);
+  align-items: center;
+  background-color: rgb(167, 164, 164);
+  border-radius: 5%;
+}
+
+.gallery-card img {
+  width: 100%;
+  border-radius: 5% 5% 0 0;
+}
+
+.gallery-card h2 {
+  text-align: center;
+  margin: 2% 0;
+}
+
+@media screen and (min-width: 769px) {
+  #section-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 50px 10%;
+    gap: 40px;
+  }
+
+  .gallery-card {
+    /* border: black 2px solid; */
+    width: 100%;
+    align-items: center;
+    background-color: rgb(167, 164, 164);
+    border-radius: 5%;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  #section-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .gallery-card {
+    /* border: black 2px solid; */
+    width: 100%;
+    align-items: center;
+    background-color: rgb(167, 164, 164);
+    border-radius: 5%;
+  }
+}
+
+/* 
+  ========
+  Contact
+  ========
+  */
+
+#section-contact {
+  background-color: grey;
+  padding: 50px 0;
+  display: flex;
+  justify-content: center;
+}
+
+#section-contact form {
+  width: var(--width-main);
+  display: flex;
+  flex-direction: column;
+  margin: 0 15%;
+  row-gap: 20px;
+}
+
+#section-contact input {
+  height: 50px;
+  font-size: 1.5em;
+  border: none;
+}
+
+#section-contact textarea {
+  resize: none;
+  width: 100%;
+  font-size: 1.5em;
+  border: none;
+  height: 250px;
+}
+
+#section-contact button {
+  width: 20%;
+  height: 7%;
+}
+
+button:hover {
+  background-color: gray;
+  color: azure;
+}
+
+.zoom {
+  animation-duration: 4s;
+  position: relative;
+  animation-name: zoom;
+}
+
+.zoom:hover {
+  transform: scale(1.2);
+}
